@@ -1,0 +1,76 @@
+h1 {
+    color: slateblue;
+    margin: 15px;
+    padding: 25px;
+    text-align: center;
+    width: 35%;
+}
+
+div {
+    display: flex;
+}
+
+body {
+    background-image: url(https://stepik.org/media/attachments/lesson/374893/world.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'McLaren', cursive;
+    height: 100vh;
+}
+
+.card-box {
+    perspective: 1000px;
+    margin: 15px;
+}
+
+.card {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+
+.front {
+    background: linear-gradient(#08aeea, #2af598);
+}
+
+.back {
+    background: linear-gradient(#f8da61, #ff5acd);
+}
+
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.front {
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.back {
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card-box:hover .card{
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
